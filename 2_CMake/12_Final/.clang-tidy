@@ -1,0 +1,14 @@
+---
+Checks: '-*,
+         clang-*,
+         bugprone-*,
+         cppcoreguidelines-*,
+         modernize-*,
+         performance-*,
+         -cppcoreguidelines-pro-type-vararg,
+         -modernize-use-trailing-return-type,
+         -bugprone-exception-escape'
+HeaderFilterRegex: 'src/*,app/*'
+AnalyzeTemporaryDtors: false
+WarningsAsErrors: ''
+...

@@ -1,0 +1,8 @@
+{
+    "name": "cpptemplate",
+    "version-string": "1.0.0",
+    "dependencies": [
+        "catch2",
+        "cxxopts"
+    ]
+}

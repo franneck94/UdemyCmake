@@ -1,0 +1,34 @@
+name: Windows CI Test
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: setup
+      run: |
+        make setup
+    - name: prepare
+      run: |
+        make prepare
+    - name: configure
+      run: |
+        cmake -H"." -Bbuild -T host=x86 -A x64 -DCMAKE_BUILD_TYPE="Debug"
+    - name: building
+      run: |
+        cmake --build build --config Debug --target unit_tests -j4
+    - name: testing
+      run: |
+        cd build
+        cd bin
+        .\unit_tests.exe
