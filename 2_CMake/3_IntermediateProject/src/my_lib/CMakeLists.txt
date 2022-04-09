@@ -1,2 +1,2 @@
-add_library(${LIBRARY_NAME} my_lib.cc)
-target_include_directories(${LIBRARY_NAME} PUBLIC "./")
+add_library(Library STATIC my_lib.cc)
+target_include_directories(Library PUBLIC "./")

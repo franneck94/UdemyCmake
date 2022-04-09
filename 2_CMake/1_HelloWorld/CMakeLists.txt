@@ -1,8 +1,8 @@
-# 0.) Create code and CMake file
+# 0.) Create code and CMake File
 # 1.) mkdir build
 # 2.) cd build
-# 3.) cmake ..
-# 4.) make
+# 3.) cmake .. # configure cmake
+# 4.) cmake --build .
 # 5.) ./Executable
 cmake_minimum_required(VERSION 3.16)
 
