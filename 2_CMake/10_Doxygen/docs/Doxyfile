@@ -1,0 +1,34 @@
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "C++ Project Template"
+PROJECT_NUMBER         = 1.0.0
+PROJECT_BRIEF          = "C++ Project Template"
+PROJECT_LOGO           =
+OUTPUT_DIRECTORY       = ./
+OUTPUT_LANGUAGE        = English
+MARKDOWN_SUPPORT       = YES
+
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+EXTRACT_ALL             = YES
+RECURSIVE               = YES
+GENERATE_HTML           = YES
+GENERATE_LATEX          = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the input files
+#---------------------------------------------------------------------------
+
+INPUT                  = ../src
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.c \
+                         *.cc \
+                         *.cxx \
+                         *.cpp \
+                         *.h \
+                         *.hh \
+                         *.hpp \
+                         *.hxx
