@@ -1,6 +1,0 @@
-[requires]
-catch2/2.13.4
-cxxopts/2.2.1
-
-[generators]
-cmake
