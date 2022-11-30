@@ -6,10 +6,6 @@ Clang-Format: Formatting tool for your C/C++ code
 Clang-Tidy: Static linting tool for your C/C++ code  
 Cppcheck: Static linting tool for your C/C++ code  
 
-Note:  
-You do not need to compile your project with clang to use Clang-Format and Clang-Tidy.  
-However, clang-tidy is sometimes a bit compilcated to use :/
-
 - Documentation for Clang-Format: [Link](https://clang.llvm.org/docs/ClangFormat.html)
 - Documentation for Clang-Tidy: [Link](https://clang.llvm.org/extra/clang-tidy/)
 - Documentation for Cppcheck: [Link](https://github.com/danmar/cppcheck)

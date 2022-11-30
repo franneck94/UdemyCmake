@@ -6,23 +6,23 @@ The conan database is [here](https://conan.io/center/).
 
 ## For Windows
 
-1. Install Python3 (>=3.4), for example by [Anaconda](https://www.anaconda.com/) or by [Chocolatey](https://chocolatey.org/)
-2. ``pip install conan``
-3. ``conan user``
+1. Install Python3 (>=3.4)
+2. Type ``pip install --user conan`` into the terminal
+3. Type ``conan user`` into the terminal
 4. Run the conan command: ``conan``
 
 ## For Linux
 
-1. Python3 (>=3.4) should be already installed. If not, install it with brew: apt-get install python3
-2. ``pip install conan`` if this failes, due to system protection try: ``pip install --user conan``
+1. Install Python3 (>=3.4)
+2. Type ``pip install --user conan`` into the terminal
 3. Append conan to the PATH by: ``source ~/.profile``
-4. ``conan user``
+4. Type ``conan user`` into the terminal
 5. Run the conan command: ``conan``
 
 ## For MacOS
 
-1. Python3 (>=3.4) should be already installed. If not, install it with brew: brew install python3
-2. ``pip install conan`` if this failes, due to system protection try: ``pip install --user conan``
+1. Install Python3 (>=3.4)
+2. Type ``pip install --user conan`` into the terminal
 3. Append conan to the PATH by: ``source ~/.profile``
-4. ``conan user``
+4. Type ``conan user`` into the terminal
 5. Run the conan command: ``conan``
