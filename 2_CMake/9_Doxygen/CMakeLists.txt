@@ -12,6 +12,7 @@ set(EXECUTABLE_NAME Executable)
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 include(AddGitSubmodule)
 include(FetchContent)
+include(Docs)
 
 FetchContent_Declare(
     nlohmann_json
