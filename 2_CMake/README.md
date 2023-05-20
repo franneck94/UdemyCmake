@@ -54,7 +54,7 @@ If you have set some options in the CMakeLists, you can pass values in the comma
 
 ```bash
 cd build
-cmake -DMY_OPTION=[ON|OFF] .. 
+cmake -DMY_OPTION=[ON|OFF] ..
 ```
 
 ## Specify the Build Target (Option 1)
@@ -132,8 +132,8 @@ In general, used for header-only libraries.
 
 ### Library
 
-A binary file that contains information about code.  
-A library cannot be executed on its own.  
+A binary file that contains information about code.
+A library cannot be executed on its own.
 An application utilizes a library.
 
 ### Shared
@@ -142,8 +142,8 @@ An application utilizes a library.
 - MacOS: *.dylib
 - Windows: *.dll
 
-Shared libraries reduce the amount of code that is duplicated in each program that makes use of the library, keeping the binaries small.  
-Shared libraries will however have a small additional cost for the execution.  
+Shared libraries reduce the amount of code that is duplicated in each program that makes use of the library, keeping the binaries small.
+Shared libraries will however have a small additional cost for the execution.
 In general the shared library is in the same directory as the executable.
 
 ### Static
@@ -151,5 +151,5 @@ In general the shared library is in the same directory as the executable.
 - Linux/MacOS: *.a
 - Windows: *.lib
 
-Static libraries increase the overall size of the binary, but it means that you don't need to carry along a copy of the library that is being used.  
+Static libraries increase the overall size of the binary, but it means that you don't need to carry along a copy of the library that is being used.
 As the code is connected at compile time there are not any additional run-time loading costs.
