@@ -1,9 +1,0 @@
-{
-    "version": 4,
-    "vendor": {
-        "conan": {}
-    },
-    "include": [
-        "C:\\Users\\Jan\\OneDrive\\_Coding\\UdemyCmake\\2_CMake\\15_Conan\\build\\CMakePresets.json"
-    ]
-}
