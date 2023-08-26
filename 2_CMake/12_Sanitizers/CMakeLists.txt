@@ -11,6 +11,8 @@ option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
 option(ENABLE_WARNINGS "Enable compiler warnings for a target" ON)
 option(ENABLE_WARNINGS_AS_ERRORS "Enable compiler warnings as errors" OFF)
 
+#Sanitizer Tools will help finding problems occuring at runtime
+
 option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
 option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 

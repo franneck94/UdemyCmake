@@ -26,6 +26,7 @@
   SOFTWARE.
 ]]
 
+#This file is downloaded from the cpm github repo assets
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 # Initialize logging prefix

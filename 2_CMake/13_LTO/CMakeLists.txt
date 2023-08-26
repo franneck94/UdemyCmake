@@ -33,6 +33,8 @@ if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     add_sanitizer_flags()
 endif()
 
+#Link Time Optimization will remove any unused functions or calls and cancel them out during linking process
+#Also called IPO inter procedural optimization
 if(ENABLE_LTO)
     include(LTO)
 endif()

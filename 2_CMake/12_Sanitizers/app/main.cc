@@ -15,8 +15,8 @@ int main()
 
     int i;
 
-    char x[10];
-    x[11] = 1;
+    char x[3] = {'a' , 'b' , 'c'};
+    x[3] = 'd';
 
     std::cout << "JSON:" << NLOHMANN_JSON_VERSION_MAJOR << "."
               << NLOHMANN_JSON_VERSION_MINOR << "."

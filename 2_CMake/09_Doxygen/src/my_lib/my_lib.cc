@@ -4,6 +4,7 @@
 
 #include "my_lib.h"
 
+// Documentation generator /***/ and press enter in between to auto generate
 /**
  * @brief Prints out hello world and tests the JSON Lib.
  *

@@ -15,4 +15,4 @@ target_link_libraries(${LIBRARY_NAME} PUBLIC
     nlohmann_json::nlohmann_json
     fmt::fmt
     spdlog::spdlog
-    cxxopts::cxxopts)
+    cxxopts::cxxopts) #project name : library name (usually same)

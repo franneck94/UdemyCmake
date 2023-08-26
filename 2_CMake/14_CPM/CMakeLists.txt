@@ -39,6 +39,9 @@ if(ENABLE_LTO)
     include(LTO)
 endif()
 
+#An unofficial cmake package manager that u can use instead of fetchcontent
+#It probably does use something like fetchcontent under the hood, but we get several more advantages that you
+# can see fromt the readme of this github repo
 if(USE_CPM)
     message(STATUS "Using CPM")
     include(CPM)

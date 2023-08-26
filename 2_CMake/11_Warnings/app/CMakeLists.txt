@@ -19,6 +19,6 @@ if (ENABLE_WARNINGS)
     target_set_warnings(
         ${EXECUTABLE_NAME}
         ON
-        OFF
+        ON
     )
 endif()

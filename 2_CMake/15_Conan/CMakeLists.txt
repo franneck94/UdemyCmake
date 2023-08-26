@@ -2,10 +2,18 @@ cmake_minimum_required(VERSION 3.16)
 
 project(CppProjectTemplate VERSION 1.0.0 LANGUAGES C CXX)
 
+set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_STANDARD          17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS        OFF)
 
+#Conan is an alternative to cpm and fetchcontent
+#for cpm and fetchcontent there needs to be a github repo that gets kindof cloned in build library that gets
+#locally compiled on your machine.
+#with conan , it has a different approach there for some compiler operating system combinations there are
+# lot of libraries already precompiled in a database and this is then downloaded so we can skip
+#compilation setup for these libraries to save time
+#YOu can check the database on the website and select requried versions n everything..
 option(USE_CPM "Whether to use CPM" OFF)
 option(USE_CONAN "Whether to use Conan" ON)
 
@@ -44,7 +52,7 @@ if(USE_CPM)
     message(STATUS "Using CPM")
     include(CPM)
     cpmaddpackage("gh:nlohmann/json#v3.11.2")
-    cpmaddpackage("gh:fmtlib/fmt#9.1.0")
+    cpmaddpackage("gh:fmtlib/fmt#10.0.0")
     cpmaddpackage("gh:gabime/spdlog#v1.11.0")
     cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
     cpmaddpackage("gh:catchorg/Catch2#v2.13.9")

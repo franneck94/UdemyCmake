@@ -1,8 +1,10 @@
+// IT indicates cmake will catch this file / edit this file or copy this file to other directory
 #pragma once
 
 #include <cstdint>
 #include <string_view>
 
+//cmake will touch this files and replace the variable names
 static constexpr std::string_view project_name = "@PROJECT_NAME@";
 static constexpr std::string_view project_version = "@PROJECT_VERSION@";
 
