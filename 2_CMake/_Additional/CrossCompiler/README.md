@@ -1,6 +1,6 @@
 # Cross Compilation with Toolchain Files
 
-## Install ARM Compiler on x84 64 Ubuntu
+## Install ARM Compiler on x86 64 Ubuntu
 
 ```shell
 sudo apt update
@@ -10,7 +10,7 @@ sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
 sudo apt install gcc-arm-linux-gnueabi g++-arm-linux-gnueabi
 ```
 
-## Install MingW Cross Compiler on x84 64 Ubuntu
+## Install MingW Cross Compiler on x86 64 Ubuntu
 
 ```shell
 sudo apt-get install mingw-w64
