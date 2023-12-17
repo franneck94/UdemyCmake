@@ -1,0 +1,219 @@
+{
+    "editor.tabSize": 4,
+    "editor.rulers": [
+        120
+    ],
+    "editor.renderWhitespace": "trailing",
+    "editor.suggestSelection": "first",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.stickyScroll.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.suggest.preview": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "debug.onTaskErrors": "debugAnyway",
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.copyRelativePathSeparator": "/",
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "node_modules/**/*": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.associations": {
+        ".clang*": "yaml",
+        "*.hpp.in": "cpp",
+        "*.in": "cpp"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor",
+        "*.svg": "svgPreviewer.customEditor"
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.useEditorConfig": true,
+    "prettier.bracketSpacing": false,
+    "markdown.validate.enabled": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+    "[yaml]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+    "[json]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.formatOnSave": false
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+    "[toml]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+    "better-comments.tags": [
+        {
+            "tag": "XXX",
+            "color": "#F8C471"
+        },
+        {
+            "tag": "WARN",
+            "color": "#FF6961"
+        },
+        {
+            "tag": "NOTE",
+            "color": "#3498DB"
+        },
+        {
+            "tag": "TODO",
+            "color": "#77C3EC"
+        }
+    ],
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "codesnap.showWindowControls": false,
+    "codesnap.shutterAction": "copy",
+    "Workspace_Formatter.excludePattern": [
+        "**/build",
+        "**/.*",
+        "**/.vscode",
+        "**/html"
+    ],
+    "Workspace_Formatter.includePattern": [
+        "*.c",
+        "*.h",
+        "*.cc",
+        "*.hh",
+        "*.cpp",
+        "*.hpp"
+    ],
+    "svg.preview.autoOpen": true,
+    "remote.WSL.fileWatcher.polling": true,
+    "errorLens.delay": 1000,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
+    "errorLens.enabled": false,
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.vcFormat.indent.preserveComments": true,
+    "C_Cpp.vcFormat.indent.namespaceContents": false,
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
+    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.formatting": "clangFormat",
+    "[c]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cuda-cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "cmake.configureOnOpen": false,
+    "cmake.autoSelectActiveFolder": false,
+    "cmake.configureOnEdit": false,
+    "[cmake]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    "cmake.options.statusBarVisibility": "visible",
+    "doxdocgen.file.fileTemplate": "@file {name}",
+    "doxdocgen.cpp.tparamTemplate": "@tparam {param} ",
+    "doxdocgen.generic.briefTemplate": "@brief {text}",
+    "doxdocgen.generic.boolReturnsTrueFalse": false,
+    "doxdocgen.generic.paramTemplate": "@param {param} ",
+    "doxdocgen.generic.returnTemplate": "@return",
+    "doxdocgen.generic.includeTypeAtReturn": false,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+    "C_Cpp.configurationWarnings": "disabled",
+    "C_Cpp_Runner.cppStandard": "c++20",
+    "C_Cpp_Runner.cStandard": "c11",
+    "C_Cpp_Runner.enableWarnings": true,
+    "C_Cpp_Runner.warningsAsError": false,
+    "C_Cpp_Runner.cCompilerPath": "gcc",
+    "C_Cpp_Runner.cppCompilerPath": "g++",
+    "C_Cpp_Runner.debuggerPath": "gdb",
+    "C_Cpp_Runner.useMsvc": false,
+    "C_Cpp_Runner.warnings": [
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Wshadow",
+        "-Wformat=2",
+        "-Wcast-align",
+        "-Wconversion",
+        "-Wsign-conversion",
+        "-Wnull-dereference"
+    ],
+    "C_Cpp_Runner.msvcWarnings": [
+        "/W4",
+        "/permissive-",
+        "/w14242",
+        "/w14287",
+        "/w14296",
+        "/w14311",
+        "/w14826",
+        "/w44062",
+        "/w44242",
+        "/w14905",
+        "/w14906",
+        "/w14263",
+        "/w44265",
+        "/w14928"
+    ],
+    "C_Cpp_Runner.compilerArgs": [],
+    "C_Cpp_Runner.linkerArgs": [],
+    "C_Cpp_Runner.includePaths": [],
+    "C_Cpp_Runner.includeSearch": [
+        "*",
+        "**/*"
+    ],
+    "C_Cpp_Runner.excludeSearch": [
+        "**/build",
+        "**/build/**",
+        "**/.*",
+        "**/.*/**",
+        "**/.vscode",
+        "**/.vscode/**"
+    ],
+    "C_Cpp_Runner.useAddressSanitizer": false,
+    "C_Cpp_Runner.useUndefinedSanitizer": false,
+    "C_Cpp_Runner.useLeakSanitizer": false,
+    "C_Cpp_Runner.showCompilationTime": false,
+    "C_Cpp_Runner.useLinkTimeOptimization": false,
+    "C_Cpp_Runner.msvcSecureNoWarnings": false,
+    "C_Cpp_Runner.msvcBatchPath": ""
+}
