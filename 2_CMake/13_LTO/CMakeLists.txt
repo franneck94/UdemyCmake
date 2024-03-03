@@ -30,7 +30,7 @@ endif()
 
 if(ENABLE_SANITIZE_ADDR OR ENABLE_SANITIZE_UNDEF)
     include(Sanitizer)
-    add_sanitizer_flags()
+    add_sanitizer_flags(ENABLE_SANITIZE_ADDR ENABLE_SANITIZE_UNDEF)
 endif()
 
 if(ENABLE_LTO)
