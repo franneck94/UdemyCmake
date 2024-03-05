@@ -44,7 +44,7 @@ FetchContent_MakeAvailable(cxxopts)
 FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2
-    GIT_TAG v2.13.9
+    GIT_TAG v3.5.3
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(Catch2)
 

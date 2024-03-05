@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(CppProjectTemplate VERSION 1.0.0 LANGUAGES C CXX)
+project(
+    CppProjectTemplate
+    VERSION 1.0.0
+    LANGUAGES C CXX)
 
-set(CMAKE_CXX_STANDARD          17)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS        OFF)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(USE_CPM "Whether to use CPM" OFF)
 option(USE_CONAN "Whether to use Conan" ON)
@@ -14,8 +17,8 @@ option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
 option(ENABLE_WARNINGS "Enable compiler warnings for a target" ON)
 option(ENABLE_WARNINGS_AS_ERRORS "Enable compiler warnings as errors" OFF)
 
-option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
-option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
+option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" OFF)
+option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" OFF)
 
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
@@ -47,7 +50,10 @@ if(USE_CPM)
     cpmaddpackage("gh:fmtlib/fmt#10.2.1")
     cpmaddpackage("gh:gabime/spdlog#v1.13.0")
     cpmaddpackage("gh:jarro2783/cxxopts#v3.1.1")
-    cpmaddpackage("gh:catchorg/Catch2#v2.13.9")
+    if(ENABLE_TESTING)
+        cpmaddpackage("gh:catchorg/Catch2#v3.5.3")
+        list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
+    endif()
 elseif(USE_CONAN)
     message(STATUS "Using Conan")
     include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
@@ -55,7 +61,10 @@ elseif(USE_CONAN)
     find_package(fmt REQUIRED)
     find_package(spdlog REQUIRED)
     find_package(cxxopts REQUIRED)
-    find_package(Catch2 REQUIRED)
+    if(ENABLE_TESTING)
+        find_package(Catch2 REQUIRED)
+        list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
+    endif()
 else()
     message(STATUS "Using FetchContent")
     FetchContent_Declare(
@@ -86,16 +95,23 @@ else()
         GIT_SHALLOW TRUE)
     FetchContent_MakeAvailable(cxxopts)
 
-    FetchContent_Declare(
-        Catch2
-        GIT_REPOSITORY https://github.com/catchorg/Catch2
-        GIT_TAG v2.13.9
-        GIT_SHALLOW TRUE)
-    FetchContent_MakeAvailable(Catch2)
+    if(ENABLE_TESTING)
+        FetchContent_Declare(
+            Catch2
+            GIT_REPOSITORY https://github.com/catchorg/Catch2
+            GIT_TAG v3.5.3
+            GIT_SHALLOW TRUE)
+        FetchContent_MakeAvailable(Catch2)
+        list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
+    endif()
 endif()
 
 add_subdirectory(configured)
 add_subdirectory(external)
 add_subdirectory(src)
 add_subdirectory(app)
-add_subdirectory(tests)
+if(ENABLE_TESTING)
+    include(CTest)
+    enable_testing()
+    add_subdirectory(tests)
+endif()

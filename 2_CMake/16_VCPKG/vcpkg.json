@@ -20,13 +20,13 @@
         },
         {
             "name": "catch2",
-            "version>=": "2.13.9"
+            "version>=": "3.5.2"
         }
     ],
     "overrides": [
         {
             "name": "catch2",
-            "version": "2.13.9"
+            "version": "3.5.2"
         }
     ],
     "builtin-baseline": "40619a55c3e76dc4005c8d1b7395071471bb8b96"
