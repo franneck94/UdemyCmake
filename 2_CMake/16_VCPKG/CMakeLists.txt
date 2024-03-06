@@ -18,8 +18,8 @@ option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
 option(ENABLE_WARNINGS "Enable compiler warnings for a target" ON)
 option(ENABLE_WARNINGS_AS_ERRORS "Enable compiler warnings as errors" OFF)
 
-option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" OFF)
-option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" OFF)
+option(ENABLE_SANITIZE_ADDR "Enable address sanitizer" ON)
+option(ENABLE_SANITIZE_UNDEF "Enable undefined sanitizer" ON)
 
 option(ENABLE_LTO "Enable LTO/IPO" ON)
 
