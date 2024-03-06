@@ -7,6 +7,6 @@
         "*.gpj": "jsonc",
         "*.gvw": "jsonc",
         "*.hpp.in": "cpp",
-        "iostream": "cpp"
+        "limits": "cpp"
     }
 }

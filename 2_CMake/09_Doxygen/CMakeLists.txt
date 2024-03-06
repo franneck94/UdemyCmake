@@ -24,7 +24,7 @@ FetchContent_MakeAvailable(nlohmann_json)
 FetchContent_Declare(
     fmt
     GIT_REPOSITORY https://github.com/fmtlib/fmt
-    GIT_TAG 9.1.0
+    GIT_TAG 10.2.1
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(fmt)
 
@@ -38,14 +38,14 @@ FetchContent_MakeAvailable(spdlog)
 FetchContent_Declare(
     cxxopts
     GIT_REPOSITORY https://github.com/jarro2783/cxxopts
-    GIT_TAG v3.2.0
+    GIT_TAG v3.1.1
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(cxxopts)
 
 FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2
-    GIT_TAG v3.5.3
+    GIT_TAG v2.13.9
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(Catch2)
 
