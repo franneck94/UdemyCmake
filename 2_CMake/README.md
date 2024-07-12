@@ -153,3 +153,18 @@ In general the shared library is in the same directory as the executable.
 
 Static libraries increase the overall size of the binary, but it means that you don't need to carry along a copy of the library that is being used.
 As the code is connected at compile time there are not any additional run-time loading costs.
+
+## Important CMake Variables for Paths
+
+- CMAKE_SOURCE_DIR
+  - Topmost folder (source directory) that contains a CMakeList.txt file.
+- PROJECT_SOURCE_DIR
+  - Contains the full path to the root of your project source directory.
+- CMAKE_CURRENT_SOURCE_DIR
+  - The directory where the currently processed CMakeLists.txt is located in.
+- CMAKE_CURRENT_LIST_DIR
+  - The directory of the listfile currently being processed. (for example a \*.cmake Module)
+- CMAKE_MODULE_PATH
+  - Tell CMake to search first in directories listed in CMAKE_MODULE_PATH when you use FIND_PACKAGE() or INCLUDE().
+- CMAKE_BINARY_DIR
+  - The filepath to the build directory
