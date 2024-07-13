@@ -1,3 +1,7 @@
+# Note:
+# configure_file: Copy a file to another location and modify its contents.
+# add_custom_command: Creates a new file
+
 set(CUSTOM_TARGET_NAME "CustomPythonTarget")
 if(NOT TARGET ${CUSTOM_TARGET_NAME})
     add_custom_target(${CUSTOM_TARGET_NAME}

@@ -138,9 +138,9 @@ An application utilizes a library.
 
 ### Shared
 
-- Linux: *.so
-- MacOS: *.dylib
-- Windows: *.dll
+- Linux: \*.so
+- MacOS: \*.dylib
+- Windows: \*.dll
 
 Shared libraries reduce the amount of code that is duplicated in each program that makes use of the library, keeping the binaries small.
 Shared libraries will however have a small additional cost for the execution.
@@ -168,3 +168,14 @@ As the code is connected at compile time there are not any additional run-time l
   - Tell CMake to search first in directories listed in CMAKE_MODULE_PATH when you use FIND_PACKAGE() or INCLUDE().
 - CMAKE_BINARY_DIR
   - The filepath to the build directory
+
+## Custom Targets and Commands
+
+- When is needed to use add_custom_target?  
+Each time we need to run a command to do something in our build system different to build a library or an executable.
+
+- When is a good idea to run a command in add_custom_target?  
+When the command must be executed always the target is built.
+
+- When is a good idea to use add_custom_command?  
+Always we want to run the command when is needed: if we need to generate a file (or more) or regenerate it if something changed in the source folder.
