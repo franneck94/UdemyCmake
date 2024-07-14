@@ -179,3 +179,36 @@ When the command must be executed always the target is built.
 
 - When is a good idea to use add_custom_command?  
 Always we want to run the command when is needed: if we need to generate a file (or more) or regenerate it if something changed in the source folder.
+
+- When is a good idea to use execute_process?  
+Running a command at configure time.
+
+## Macros vs Functions
+
+The only difference between a function and a macro is scope; macros don't have one.  
+So, if you set a variable in a function and want it to be visible outside, you'll need PARENT_SCOPE.
+
+## Generator Expressions
+
+Using generator expressions one can configure the project differently for different build types in multi-configuration generators.  
+For such generators the project is configured (with running cmake) once, but can be built for several build types after that. Example of such generators is Visual Studio.
+
+For multiconfiguration generators CMAKE_BUILD_TYPE is not known at configuration stage.  
+Because of that using if-else switching doesn't work:
+
+```cmake
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_definitions("/W4 /Wx")
+elif(CMAKE_BUILD_TYPE STREQUAL "Release")
+    add_compile_definitions("/W4")
+endif()
+```
+
+But using conditional generator expressions works:
+
+```cmake
+add_compile_definitions(
+    $<$<CONFIG:Debug>:/W4 /Wx>
+    $<$<CONFIG:Release>:/W4>
+)
+```
