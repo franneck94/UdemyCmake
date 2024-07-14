@@ -169,6 +169,17 @@ As the code is connected at compile time there are not any additional run-time l
 - CMAKE_BINARY_DIR
   - The filepath to the build directory
 
+## Things you can set on targets
+
+- target_link_libraries: Other targets; can also pass library names directly
+- target_include_directories: Include directories
+- target_compile_features: The compiler features you need activated, like cxx_std_11
+- target_compile_definitions: Definitions
+- target_compile_options: More general compile flags
+- target_link_directories: Don’t use, give full paths instead (CMake 3.13+)
+- target_link_options: General link flags (CMake 3.13+)
+- target_sources: Add source files
+
 ## Custom Targets and Commands
 
 - When is needed to use add_custom_target?  
