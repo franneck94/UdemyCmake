@@ -191,24 +191,28 @@ So, if you set a variable in a function and want it to be visible outside, you'l
 ## Generator Expressions
 
 Using generator expressions one can configure the project differently for different build types in multi-configuration generators.  
-For such generators the project is configured (with running cmake) once, but can be built for several build types after that. Example of such generators is Visual Studio.
+For such generators the project is configured (with running cmake) once, but can be built for several build types after that.  
+Example of such generators is Visual Studio.
 
 For multiconfiguration generators CMAKE_BUILD_TYPE is not known at configuration stage.  
 Because of that using if-else switching doesn't work:
 
 ```cmake
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_compile_definitions("/W4 /Wx")
+    add_compile_options("/W4 /Wx")
 elif(CMAKE_BUILD_TYPE STREQUAL "Release")
-    add_compile_definitions("/W4")
+    add_compile_options("/W4")
 endif()
 ```
 
 But using conditional generator expressions works:
 
 ```cmake
-add_compile_definitions(
+add_compile_options(
     $<$<CONFIG:Debug>:/W4 /Wx>
     $<$<CONFIG:Release>:/W4>
 )
 ```
+
+The Visual Studio, XCode and Ninja Multi-Config generators let you have more than one configuration in the same build directory, and thus won't be using the CMAKE_BUILD_TYPE cache variable.  
+Instead the CMAKE_CONFIGURATION_TYPES cache variable is used and contains the list of configurations to use for this build directory.
