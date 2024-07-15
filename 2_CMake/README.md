@@ -182,30 +182,30 @@ As the code is connected at compile time there are not any additional run-time l
 
 ## Custom Targets and Commands
 
-- When is needed to use add_custom_target?  
+- When is needed to use add_custom_target?
 Each time we need to run a command to do something in our build system different to build a library or an executable.
 
-- When is a good idea to run a command in add_custom_target?  
+- When is a good idea to run a command in add_custom_target?
 When the command must be executed always the target is built.
 
-- When is a good idea to use add_custom_command?  
+- When is a good idea to use add_custom_command?
 Always we want to run the command when is needed: if we need to generate a file (or more) or regenerate it if something changed in the source folder.
 
-- When is a good idea to use execute_process?  
+- When is a good idea to use execute_process?
 Running a command at configure time.
 
 ## Macros vs Functions
 
-The only difference between a function and a macro is scope; macros don't have one.  
+The only difference between a function and a macro is scope; macros don't have one.
 So, if you set a variable in a function and want it to be visible outside, you'll need PARENT_SCOPE.
 
 ## Generator Expressions
 
-Using generator expressions one can configure the project differently for different build types in multi-configuration generators.  
-For such generators the project is configured (with running cmake) once, but can be built for several build types after that.  
+Using generator expressions one can configure the project differently for different build types in multi-configuration generators.
+For such generators the project is configured (with running cmake) once, but can be built for several build types after that.
 Example of such generators is Visual Studio.
 
-For multiconfiguration generators CMAKE_BUILD_TYPE is not known at configuration stage.  
+For multiconfiguration generators CMAKE_BUILD_TYPE is not known at configuration stage.
 Because of that using if-else switching doesn't work:
 
 ```cmake
@@ -225,5 +225,35 @@ add_compile_options(
 )
 ```
 
-The Visual Studio, XCode and Ninja Multi-Config generators let you have more than one configuration in the same build directory, and thus won't be using the CMAKE_BUILD_TYPE cache variable.  
+The Visual Studio, XCode and Ninja Multi-Config generators let you have more than one configuration in the same build directory, and thus won't be using the CMAKE_BUILD_TYPE cache variable.
 Instead the CMAKE_CONFIGURATION_TYPES cache variable is used and contains the list of configurations to use for this build directory.
+
+## Cross Compilation with Toolchain Files
+
+## ARM 32 Cross
+
+```shell
+cmake -B build_arm32 -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/arm32-cross-toolchain.cmake
+cmake --build build_arm32 -j8
+```
+
+## ARM 32 Native
+
+```shell
+cmake -B build -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/arm32-native-toolchain.cmake
+cmake --build build -j8
+```
+
+## x86 64 MingW
+
+```shell
+cmake -B build_mingw -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/x86-64-mingw-toolchain.cmake
+cmake --build build_mingw -j8
+```
+
+## x86 64 Native
+
+```shell
+cmake -B build -DCMAKE_TOOLCHAIN_FILE=cmake/toolchains/x86-64-native-toolchain.cmake
+cmake --build build -j8
+```
